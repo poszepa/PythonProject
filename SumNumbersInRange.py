@@ -1,6 +1,7 @@
 """
 Write a program, which calculate sum every number from 1 to input a number.
 """
+import time
 
 
 def sumNumberInRange(endOfRange):
