@@ -1,7 +1,7 @@
 import time
 
-def calculate_run_time(dif):
+def calculate_run_time(dif,arg):
     start = time.perf_counter()
-    dif
+    dif(arg)
     end = time.perf_counter()
     return (end - start)
