@@ -1,4 +1,4 @@
-import testuje
+import Enum
 
 if __name__ == '__main__':
-    testuje.test_function()
+    Enum.program_to_calculate_area()
