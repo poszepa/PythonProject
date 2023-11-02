@@ -7,7 +7,7 @@ def random_float(start_range, end_range):
     return random.uniform(start_range, end_range)
 
 # Random int number
-def random_float(start_range, end_range):
+def random_int(start_range, end_range):
     return random.randrange(start_range, end_range)
 
 nameList = ["Kamil", "Wojtek", "Nikodem", "Anita", "Tomek"]
