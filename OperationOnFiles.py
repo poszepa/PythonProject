@@ -86,3 +86,15 @@ def save_firstName_Surname_to_file(list_name, file_firstName = "imiona.text", fi
             file.write("\n" + lastName[1])
 
 
+
+def read_file(file_name):
+    try:
+        return text_from_file(file_name)
+    except FileNotFoundError:
+        print("file doesn't exsist")
+
+
+def run_program():
+    file_name = input("Input file name: ")
+    print(read_file(file_name))
+
