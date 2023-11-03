@@ -48,3 +48,41 @@ def file_r_plus():
         file.seek(0)
         for line in file:
             print(line)
+
+
+#Test w+
+#That arg is not usually use because when file is exsist those file will be
+#remove and will be create new file.
+
+###################################################
+
+#Test a+
+#that propably work similary like r+.
+#On r+ we have cursor on the start file, on the a+ we have on the end.
+
+def text_from_file(file_name):
+    text = []
+    with open(file_name, "r", encoding="UTF-8") as file:
+        for line in file:
+            text.append(line.split("\n")[0])
+    return text
+
+def split_firstName_surname(text):
+    list_name_and_surname = []
+    for name in text:
+        person = name.split(" ")
+        try:
+            list_name_and_surname.append((person[0], person[1]))
+        except IndexError:
+            list_name_and_surname.append(("none", person[0]))
+    return list_name_and_surname
+
+def save_firstName_Surname_to_file(list_name, file_firstName = "imiona.text", file_surname = "nazwiska.txt"):
+    with open(file_firstName, "w", encoding="UTF-8") as file:
+        for firstName in list_name:
+            file.write("\n" + firstName[0])
+    with open(file_surname, "w", encoding="UTF-8") as file:
+        for lastName in list_name:
+            file.write("\n" + lastName[1])
+
+
