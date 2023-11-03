@@ -24,3 +24,13 @@ def controlLine():
 
     #file.tell - return number of char
     #With file.seek we can jump to conctret place in file
+
+
+def fileAppend():
+    with open("test.txt", "a", encoding="UTF-8") as file:
+        file.write(
+            "\n" +
+            "Test"
+        )
+
+        #Arg 'a' wrtie 'append' add text to end of file in last line.
