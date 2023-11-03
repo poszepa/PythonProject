@@ -36,6 +36,9 @@ def fileAppend():
         #Arg 'a' wrtie 'append' add text to end of file in last line.
 
 #Test r+
+#r+ do not create new file in file in arg doesn't exsist. So if
+#we try to open file which we dont have on the driver we will got
+#error
 
 def file_r_plus():
     with open("test.txt", "r+", encoding="UTF-8") as file:
