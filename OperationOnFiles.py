@@ -8,5 +8,19 @@ def readLine():
     with open("test.txt", "r", encoding="UTF-8") as file:
         for line in file:
             print(line)
-
         #With as working like open and close the file. We not need to rembember to close the file.
+
+
+
+def controlLine():
+    with open("test.txt", "r", encoding="UTF-8") as file:
+        print(file.readline())
+        print(file.tell())
+        print(file.readline())
+        print(file.tell())
+        file.seek(0) # here we go to first place in file
+        print(file.readline())
+        print(file.tell())
+
+    #file.tell - return number of char
+    #With file.seek we can jump to conctret place in file
