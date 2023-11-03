@@ -34,3 +34,14 @@ def fileAppend():
         )
 
         #Arg 'a' wrtie 'append' add text to end of file in last line.
+
+#Test r+
+
+def file_r_plus():
+    with open("test.txt", "r+", encoding="UTF-8") as file:
+        for line in file:
+            print(line)
+        file.write("\nThat is the last message99")
+        file.seek(0)
+        for line in file:
+            print(line)
