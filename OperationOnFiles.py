@@ -1,10 +1,8 @@
 
-try:
-    file = open("test.txt", "w")
-    file.write("I'm testing")
+def file():
+    with open("test.txt", "w") as file:
+        file.write("new line")
 
-    print(0/0)
 
-    file.write("I'm testing here")
-finally:
-    file.close()
+
+        #With as working like open and close the file. We not need to rembember to close the file.
