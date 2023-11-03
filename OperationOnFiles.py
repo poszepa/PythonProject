@@ -94,7 +94,7 @@ def read_file(file_name):
         print("file doesn't exsist")
 
 
-def run_program():
+def run_program_first():
     file_name = input("Input file name: ")
     print(read_file(file_name))
 
